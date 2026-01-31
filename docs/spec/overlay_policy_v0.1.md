@@ -1,6 +1,3 @@
-# FILE: docs/spec/overlay_policy_v0.1.md
-# ======================================================================
-
 # GOS Overlay Policy v0.1 (Admin Walls, Never Weaken Canonical)
 
 ## Purpose
