@@ -1,6 +1,3 @@
-# FILE: docs/spec/capabilities_v0.1.md
-# ======================================================================
-
 # GOS Capabilities v0.1 (Canonical Vocabulary)
 
 ## Purpose
