@@ -1,55 +1,37 @@
-# GOS Reason Codes v0.1 (Canonical)
+# Reason Codes v0.1 (Stable)
 
 ## Purpose
-Stable, machine-parseable reason codes for every ALLOW/DENY.
-Reason codes MUST be deterministic and MUST NOT leak secrets.
+Reason codes are part of the deterministic output surface.
+They MUST be stable across releases once published.
 
-Format:
-- allow.<category>.<detail>
-- deny.<category>.<detail>
+## Canonical Codes
+ALLOW_OK
+DENY_DEFAULT
+DENY_UNKNOWN_ACTION
+DENY_UNKNOWN_TARGET
+DENY_NOT_CANONICAL_PACKAGE
+DENY_SIGNATURE_INVALID
+DENY_HASH_MISMATCH
+DENY_POLICY_MISSING
+DENY_POLICY_PARSE_FAIL
+DENY_POLICY_CONFLICT
+DENY_OVERLAY_RESTRICTED
+DENY_CAPABILITY_NOT_GRANTED
+DENY_SANDBOX_VIOLATION
+DENY_ATTESTATION_REQUIRED
+DENY_FIRMWARE_NOT_TRUSTED
+DENY_GOS_NOT_TRUSTED
+DENY_WORKLOAD_NOT_TRUSTED
+DENY_USER_NOT_PROVEN
+DENY_CHILD_LANE_RULE
+DENY_TIME_WINDOW
+DENY_NETWORK_RULE
+DENY_EXPORT_NOT_ALLOWED
+DENY_DEVICE_CONTROL_NOT_ALLOWED
+DENY_RESTORE_NOT_ALLOWED
+DENY_UPDATE_NOT_ALLOWED
 
-## Allow Codes (v0.1)
-- allow.canonical.ok
-- allow.overlay.ok
-- allow.capability.granted
-- allow.lane.permitted
-
-## Deny Codes (v0.1)
-### Request / schema failures
-- deny.malformed_request
-- deny.missing_required_field
-- deny.invalid_field_value
-
-### Capability / action failures
-- deny.unknown_action
-- deny.unknown_capability
-- deny.capability_not_granted
-- deny.capability_params_out_of_bounds
-
-### Trust / attestation failures
-- deny.insufficient_trust
-- deny.attestation_failed
-- deny.firmware_untrusted
-- deny.device_state_untrusted
-
-### Overlay tightening
-- deny.overlay_restriction
-- deny.overlay_time_window
-- deny.overlay_allowlist
-
-### Safety / policy
-- deny.default_deny
-- deny.non_canonical_artifact
-- deny.signature_invalid
-- deny.hash_mismatch
-- deny.revoked_publisher
-- deny.revoked_plugin
-
-### System failures
-- deny.gate_error
-- deny.audit_unavailable
-- deny.seal_failed
-
-## Requirement
-Every DENY must pick exactly one primary reason_code.
-Additional detail can be added as obligations or audit evidence references.
+## Rule
+If new codes are introduced:
+- they must be documented here
+- they must not replace semantics of existing codes
