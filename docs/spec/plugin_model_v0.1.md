@@ -1,6 +1,3 @@
-# FILE: docs/spec/plugin_model_v0.1.md
-# ======================================================================
-
 # GOS Plugin Model v0.1 (Canonical)
 
 ## Purpose
