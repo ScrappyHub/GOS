@@ -1,0 +1,4 @@
+# GENERATED FILE — do not hand-edit.
+# Run: scripts/make_allowed_signers_v1.ps1 -RepoRoot <repo>
+#
+# This file will contain ssh-keygen -Y allowed_signers lines.
