@@ -1,0 +1,7 @@
+ops/snapshots/
+artifacts/
+proofs/keys/*.key
+proofs/keys/*.pem
+packets/inbox/
+packets/outbox/
+packets/quarantine/
