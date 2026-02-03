@@ -1,0 +1,21 @@
+{
+  "schema": "trust_bundle.v1",
+  "bundle_id": "gos-runtime-trust-bundle-v1",
+  "producer": "gos_runtime",
+  "principals": [
+    {
+      "principal": "single-tenant/gos_runtime_authority/authority/gos_runtime",
+      "keys": [
+        {
+          "key_id": "gos-runtime-authority-ed25519",
+          "pubkey_sha256": "REPLACE_WITH_SHA256_OF_PUBKEY_FILE"
+        }
+      ],
+      "namespaces": [
+        "gos/packet",
+        "gos/snapshot",
+        "nfl/ingest"
+      ]
+    }
+  ]
+}
