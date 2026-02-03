@@ -1,0 +1,11 @@
+{
+  "schema": "event_types.v1",
+  "producer": "gos_runtime",
+  "event_types": [
+    "gos.runtime.snapshot.created.v1",
+    "gos.runtime.snapshot.verified.v1",
+    "gos.runtime.snapshot.failed.v1",
+    "gos.runtime.nfl.duplicate.succeeded.v1",
+    "gos.runtime.nfl.duplicate.failed.v1"
+  ]
+}
